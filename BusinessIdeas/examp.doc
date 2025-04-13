@@ -1,0 +1,47 @@
+Berikut adalah penjelasan lebih detail tentang hubungan antar fitur utama dalam sistem Point of Sale (POS):
+
+1. Manajemen Produk
+Deskripsi: Fitur ini memungkinkan pengguna untuk menambahkan, mengedit, dan menghapus produk yang dijual. Setiap produk memiliki atribut seperti nama, harga, kategori, dan stok.
+Hubungan:
+        Manajemen Stok: Data stok produk diperbarui secara otomatis setiap kali ada transaksi penjualan.
+        Transaksi Penjualan: Produk yang tersedia di database akan muncul dalam daftar pencarian saat kasir memproses transaksi.
+        Laporan Penjualan: Informasi produk digunakan untuk menghasilkan laporan penjualan berdasarkan kategori atau produk tertentu.
+
+2. Manajemen Stok
+Deskripsi: Fitur ini memantau jumlah stok barang secara real-time dan memberikan peringatan jika stok mendekati batas minimum.
+Hubungan:
+        Manajemen Produk: Stok barang diperbarui saat produk baru ditambahkan atau stok diubah secara manual.
+        Transaksi Penjualan: Setiap transaksi akan mengurangi jumlah stok barang secara otomatis.
+        Laporan Penjualan: Data stok digunakan untuk menganalisis produk yang paling laris dan produk yang jarang terjual.
+
+3. Transaksi Penjualan
+Deskripsi: Fitur ini memungkinkan kasir untuk memproses pembayaran, memberikan diskon, dan mencetak struk.
+Hubungan:
+        Manajemen Produk: Produk yang dipilih untuk transaksi diambil dari daftar produk yang tersedia.
+        Manajemen Stok: Setelah transaksi selesai, stok barang akan diperbarui secara otomatis.
+        Laporan Penjualan: Setiap transaksi dicatat dan digunakan untuk menghasilkan laporan penjualan.
+
+4. Laporan Penjualan
+Deskripsi: Fitur ini menyediakan laporan penjualan harian, mingguan, atau bulanan untuk membantu pemilik bisnis menganalisis performa penjualan.
+Hubungan:
+        Transaksi Penjualan: Data transaksi digunakan untuk menghitung total penjualan, produk terlaris, dan pendapatan.
+        Manajemen Produk: Laporan dapat difilter berdasarkan kategori produk atau produk tertentu.
+        Manajemen Stok: Laporan dapat menunjukkan stok barang yang perlu diisi ulang berdasarkan tren penjualan.
+
+5. Manajemen Pengguna
+Deskripsi: Fitur ini mengatur hak akses untuk pengguna seperti admin, kasir, atau supervisor.
+Hubungan:
+        Transaksi Penjualan: Kasir hanya memiliki akses untuk memproses transaksi, sedangkan admin dapat mengelola produk dan stok.
+        Laporan Penjualan: Hanya pengguna dengan hak akses tertentu (misalnya admin) yang dapat melihat laporan penjualan.
+
+6. Integrasi Pembayaran
+Deskripsi: Fitur ini mendukung berbagai metode pembayaran seperti tunai, kartu kredit, atau e-wallet.
+Hubungan:
+        Transaksi Penjualan: Kasir dapat memilih metode pembayaran yang diinginkan saat memproses transaksi.
+        Laporan Penjualan: Laporan dapat menunjukkan metode pembayaran yang paling sering digunakan oleh pelanggan.
+
+7. Cloud Backup
+Deskripsi: Fitur ini memastikan data transaksi, produk, dan laporan disimpan secara aman di cloud.
+Hubungan:
+        Manajemen Produk, Stok, dan Transaksi Penjualan: Semua data yang dihasilkan dari fitur ini akan disinkronkan ke cloud untuk mencegah kehilangan data.
+        Laporan Penjualan: Data laporan dapat diakses kapan saja dan di mana saja melalui cloud.

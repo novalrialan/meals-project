@@ -1,0 +1,21 @@
+{
+  "Menus": [
+    {
+      "id": "1",
+      "title": "Meat",
+      "icon": "/src/assets/png/iconmeals.png"
+    },
+    { "id": "2", "title": "Fish", "icon": "/src/assets/png/iconfish.png" },
+    {
+      "id": "3",
+      "title": "Vegetable",
+      "icon": "/src/assets/png/iconvegetable.png"
+    },
+    { "id": "4", "title": "Cake", "icon": "/src/assets/png/iconcake.png" },
+    {
+      "id": "5",
+      "title": "IceCream",
+      "icon": "/src/assets/png/iconicecream.png"
+    }
+  ]
+}
